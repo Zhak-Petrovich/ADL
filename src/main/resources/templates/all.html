@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=”http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>ALL</title>
+</head>
+<body>
+<table border="1" cellspacing="0.5">
+    <tr>
+        <th>Id записи</th>
+        <th>Проект корпуса/сборки</th>
+        <th>Article</th>
+        <th>Название детали</th>
+        <th>Вид материала</th>
+        <th>Вид сборки детали</th>
+        <th>V1</th>
+        <th>V2</th>
+        <th>Кол-во составных</th>
+        <th>Дата выдачи номера/артикула</th>
+        <th>Название документа</th>
+        <th>Пригодность детали</th>
+        <th>Описание детали</th>
+    </tr>
+    <th:block th:each="detail : ${details}">
+        <tr>
+            <td th:text="${detail.id}"></td>
+            <td th:text="${detail.projectCase}"></td>
+            <td th:text="${detail.article}"></td>
+            <td th:text="${detail.nameDetail}"></td>
+            <td th:text="${detail.materialType}"></td>
+            <td th:text="${detail.assemblyType}"></td>
+            <td th:text="${detail.v1}"></td>
+            <td th:text="${detail.v2}"></td>
+            <td th:text="${detail.detailQuantity}"></td>
+            <td th:text="${detail.ddate}"></td>
+            <td th:text="${detail.fullName}"></td>
+            <td th:text="${detail.lifeVersion}"></td>
+            <td th:text="${detail.description}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
