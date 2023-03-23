@@ -1,6 +1,5 @@
 package com.adl.test.model;
 
-import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -17,7 +16,6 @@ public class Prj {
     @Column(name = "PRJ")
     private String prj;
     @Column(name = "NamePRJ")
-    @Nullable
     private String name;
     @Column(name = "titleDocument")
     private String title;

@@ -39,7 +39,7 @@ public class DetailUtil {
     public static DetailTo createTo(Detail detail) {
         MaterialType materialType = materialTypeRepository.findById(detail.getMaterialType()).get();
         AssemblyType assemblyType = assemblyDetTypeRepository.findById(detail.getAssemblyType()).orElse(null);
-        Prj prj = projectRepository.getById(detail.getProjectCase());
+        Prj prj = projectRepository.findById(detail.getProjectCase()).get();
         LifeVersion detailLife = detailLifeRepository.findById(detail.getLifeVersion()).get();
 
 
