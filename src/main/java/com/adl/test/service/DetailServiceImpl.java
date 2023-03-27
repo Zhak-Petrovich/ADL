@@ -4,9 +4,7 @@ import com.adl.test.model.Detail;
 import com.adl.test.repository.DetailRepository;
 import com.adl.test.to.DetailTo;
 import com.adl.test.util.DetailUtil;
-import jakarta.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,7 +12,7 @@ import java.util.List;
 
 @Service
 public class DetailServiceImpl implements DetailService {
-    private DetailRepository repository;
+    private final DetailRepository repository;
 
     @Autowired
     public DetailServiceImpl(DetailRepository repository) {
@@ -22,7 +20,7 @@ public class DetailServiceImpl implements DetailService {
     }
 
     public List<Detail> getAllDetails() {
-        return repository.findAll();
+        return repository.findDetails();
     }
     
     public List<DetailTo> getDetailTos(List<Detail> details) {

@@ -1,7 +1,6 @@
 package com.adl.test.controller;
 
 import com.adl.test.model.Detail;
-import com.adl.test.security.Users;
 import com.adl.test.service.DetailService;
 import com.adl.test.to.DetailTo;
 import org.springframework.beans.factory.annotation.Autowired;
